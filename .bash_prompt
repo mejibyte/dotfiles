@@ -1,0 +1,13 @@
+# To load this file, add something like this to your .bash_profile:
+#
+# if [ -r ~/.../.bash_prompt ]; then
+#    source ~/.../.bash_prompt
+# fi
+
+# Git branch in prompt.
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+# Color codes from https://misc.flogisoft.com/bash/tip_colors_and_formatting.
+export PS1="\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\]\[\033[38;5;60m\]\$(parse_git_branch)\[\033[00m\] \n\[\033[01;31m\]\$\[\033[00m\] "
