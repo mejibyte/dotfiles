@@ -1,0 +1,17 @@
+# Include this file from ~/.gitconfig by adding a block like this:
+#
+# [include]
+#   path = /path/to/this/file/.git_aliases
+
+# Pretty log showing the entire tree.
+[alias]
+    tree = !"git tree1"
+    tree1 = !"git tree1-specific --all"
+    tree2 = !"git tree2-specific --all"
+    tree3 = !"git tree3-specific --all"
+    tree4 = !"git tree4-specific --all"
+
+    tree1-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'
+    tree2-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
+    tree3-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(auto)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)'
+    tree4-specific = log --color --graph --oneline --decorate
