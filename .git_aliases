@@ -5,7 +5,7 @@
 
 # Pretty log showing the entire tree.
 [alias]
-    tree = !"git tree1"
+    tree = !"git tree2"
     tree1 = !"git tree1-specific --all"
     tree2 = !"git tree2-specific --all"
     tree3 = !"git tree3-specific --all"

@@ -44,6 +44,14 @@ alias cppd="cap production deploy"
 alias cpdti="cap development tolk:import"
 alias cpdtc="cap development tolk:copy"
 
+# Kubernetes
+alias kub="kubectl"
+alias kg="kubectl get"
+
+# Docker
+alias dkr="docker"
+alias dps="docker ps"
+
 # Editor
 alias vs="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
 
