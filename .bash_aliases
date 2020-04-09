@@ -47,6 +47,9 @@ alias cpdtc="cap development tolk:copy"
 # Kubernetes
 alias kub="kubectl"
 alias kg="kubectl get"
+alias kgp="kubectl get pods"
+alias kgd="kubectl get deployments"
+alias kgrs="kubectl get replicasets"
 
 # Docker
 alias dkr="docker"
