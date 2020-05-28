@@ -24,7 +24,10 @@ alias glg="git log"
 alias gmr="git merge"
 alias gdf="git diff"
 alias retrigger_tests="git commit -m \"Empty commit to retrigger tests.\" --allow-empty && git push"
-
+# Prints branches that used to track something in origin and are now gone.
+# We need to escape $_ because we have double quotes and bash will try to
+# replace $_ inside double quotes with some other garbage. I hate bash.
+alias branches_gone_from_origin="git fetch -p && git branch -vv | ruby -ne 'puts \$_.split.first if \$_ =~ /\[origin\/[a-z_]+: gone\] /'"
 # Rails
 alias be="bundle exec"
 alias dbrs="be rake db:reset_and_seed"
