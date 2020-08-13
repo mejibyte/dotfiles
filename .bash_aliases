@@ -65,5 +65,9 @@ alias dkr="docker"
 alias dps="docker ps"
 
 # Editor
-alias vs="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
-
+if [ $(uname -s) = "Linux" ]
+then
+    alias vs="code"
+else # Mac OS
+    alias vs="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
+fi
