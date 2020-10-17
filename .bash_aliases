@@ -65,3 +65,7 @@ alias dps="docker ps"
 # Editor
 alias vs="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
 
+alias t="ruby ~/bin/compile-and-run.rb"
+alias removemetadata="exiftool -overwrite_original_in_place -all= " # Mac only?
+alias hide_file="chflags hidden" # Mac only
+alias unhide_file="chflags nohidden" # Mac only
