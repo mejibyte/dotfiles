@@ -13,10 +13,12 @@ alias gad="git add"
 alias gcm="git commit"
 alias gcmm="git commit -m"
 alias gps="git push"
+alias gpsf="git push -f"
 alias gpl="git pull"
 alias gst="git status"
 alias gbr="git branch"
 alias grb="git rebase"
+alias grbm="git rebase master"
 alias gsw="git switch"
 alias gco="git checkout"
 alias gcom="git checkout master"
@@ -62,10 +64,17 @@ alias kgrs="kubectl get replicasets"
 alias dkr="docker"
 alias dps="docker ps"
 
-# Editor
-alias vs="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
 
 alias t="ruby ~/bin/compile-and-run.rb"
 alias removemetadata="exiftool -overwrite_original_in_place -all= " # Mac only?
 alias hide_file="chflags hidden" # Mac only
 alias unhide_file="chflags nohidden" # Mac only
+
+
+# Editor
+if [ $(uname -s) = "Linux" ]
+then
+    alias vs="code"
+else # Mac OS
+    alias vs="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
+fi
