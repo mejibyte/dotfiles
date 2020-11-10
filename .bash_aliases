@@ -70,7 +70,6 @@ alias removemetadata="exiftool -overwrite_original_in_place -all= " # Mac only?
 alias hide_file="chflags hidden" # Mac only
 alias unhide_file="chflags nohidden" # Mac only
 
-
 # Editor
 if [ $(uname -s) = "Linux" ]
 then
@@ -78,3 +77,6 @@ then
 else # Mac OS
     alias vs="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
 fi
+
+# JWT
+alias decode_jwt_token="jq -R 'gsub("-";"+") | gsub("_";"/") | split(".") | .[1] | @base64d | fromjson'"
